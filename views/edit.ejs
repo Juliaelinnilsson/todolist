@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit</title>
+ 
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <form method="Post">
+        <input type="text" name="text" id="" value="<%= response.text%>">
+        <input type="text" name="author" id="" value="<%= response.author %>">
+    
+        <input type="text" name="_id" value="<%= response._id %>" hidden>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
