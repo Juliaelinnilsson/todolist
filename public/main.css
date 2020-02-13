@@ -1,2 +1,14 @@
-body {
-  background-color: 0; }
+.editpage {
+  background: green; }
+
+.landingpage {
+  background: pink;
+  margin-top: 5rem; }
+  .landingpage h1 {
+    text-align: center; }
+  .landingpage li {
+    background: red; }
+    .landingpage li .todo {
+      width: 300px; }
+    .landingpage li .editbtn {
+      text-align: right; }

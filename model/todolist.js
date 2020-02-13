@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const schemaTodoList = new mongoose.Schema(
     {
         todo: String,
-        date: { type: Date, default: Date.now },
+        date: String,
     }
 );
 

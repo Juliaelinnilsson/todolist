@@ -1,3 +1,25 @@
-body {
-    background-color: red($color: #000000);
+.editpage{
+    background: green;
+}
+
+.landingpage {
+    background:pink;
+    margin-top: 5rem;
+    
+    h1 {
+        text-align: center;
+    }
+
+    li {
+
+        background: red;
+
+        .todo{
+            width: 300px;
+        }
+
+        .editbtn {
+            text-align: right;
+        }
+    }
 }
