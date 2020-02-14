@@ -1,14 +1,23 @@
 .editpage {
-  background: green; }
+  background: #dddddd;
+  text-align: center;
+  margin-top: 5rem; }
 
 .landingpage {
-  background: pink;
+  background: #dddddd;
   margin-top: 5rem; }
   .landingpage h1 {
     text-align: center; }
-  .landingpage li {
-    background: red; }
-    .landingpage li .todo {
-      width: 300px; }
-    .landingpage li .editbtn {
-      text-align: right; }
+  .landingpage .dates {
+    position: absolute;
+    right: 60px; }
+  .landingpage .datetext {
+    font-weight: bold;
+    font-size: 10pt;
+    margin-top: 4px; }
+  .landingpage .icons {
+    position: absolute;
+    right: 13px; }
+  .landingpage .icon {
+    color: #ff7300;
+    font-size: 12pt; }

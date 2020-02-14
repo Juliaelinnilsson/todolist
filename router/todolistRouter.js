@@ -45,9 +45,9 @@ router.get("/update/:id", async (req, res) => {
 })
 router.post("/update/:id", async (req, res) => {
     //använd updateOne metoden för att kunna redigera kommentarerna
-    await Todo.updateOne({ _id: req.body._id, date: req.body.date },
+    await Todo.updateOne({ _id: req.body._id },
         {
-            $set: { todo: req.body.todo }
+            $set: { todo: req.body.todo, date: req.body.date }
         })
     res.redirect("/todolist");
 })

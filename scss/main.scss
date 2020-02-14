@@ -1,25 +1,34 @@
+$background: rgb(221, 221, 221);
+
 .editpage{
-    background: green;
+    background: $background;
+    text-align: center;
+    margin-top: 5rem;
 }
 
 .landingpage {
-    background:pink;
+    background: $background;
     margin-top: 5rem;
     
     h1 {
         text-align: center;
+    }      
+    .dates{
+        position: absolute;
+        right: 60px;
     }
-
-    li {
-
-        background: red;
-
-        .todo{
-            width: 300px;
-        }
-
-        .editbtn {
-            text-align: right;
-        }
+    .datetext{
+        font-weight: bold;
+        font-size: 10pt;
+        margin-top: 4px;
+       
+    }
+    .icons{
+        position: absolute;
+        right: 13px;
+    }
+    .icon{
+        color: rgb(255, 115, 0);
+        font-size: 12pt;
     }
 }
