@@ -3,8 +3,6 @@ const Todo = require("../model/todolist")
 if (process.env.NODE_ENV !== 'production') require('dotenv').config({ path: "./.env" });
 const router = express.Router();
 
-
-
 router.get("/todolist", async (req, res) => {
     const todoObject = await Todo.find()
     res.render("todolistViews", { todoObject });
