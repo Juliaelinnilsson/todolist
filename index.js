@@ -12,7 +12,7 @@ app.set("view engine", "ejs")
 
 app.use(todolistRouter)
 
-const port = process.env.PORT || 8010;
+const port = process.env.PORT || 8080;
 const options = {
     useUnifiedTopology: true,
     useNewUrlParser: true
