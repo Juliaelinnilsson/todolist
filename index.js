@@ -4,7 +4,7 @@ const todolistRouter = require("./router/todolistRouter");
 const config = require("./config/config");
 const path = require("path");
 const app = express();
-//const env = require("dotenv").config({ path: "./.env" })
+
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, "public")));
