@@ -27,6 +27,7 @@ router.post("/createtodo", async (req, res) => {
 router.get("/todolist", async (req, res) => {
     const todoObject = await Todo.find()
     res.render("todolistViews", { todoObject });
+    
 })
 
 router.get("/delete/:id", async (req, res) => {
