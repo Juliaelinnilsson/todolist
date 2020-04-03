@@ -2,6 +2,14 @@ const express = require("express");
 const Todo = require("../model/todolist")
 const router = express.Router();
 
+
+
+router.get("/todolist", async (req, res) => {
+    const todoObject = await Todo.find()
+    res.render("todolistViews", { todoObject });
+
+})
+
 router.get("/createtodo", async (req, res) => {
     res.render("todo");
 })
@@ -23,12 +31,6 @@ router.post("/createtodo", async (req, res) => {
         }
     });
 });
-
-router.get("/todolist", async (req, res) => {
-    const todoObject = await Todo.find()
-    res.render("todolistViews", { todoObject });
-    
-})
 
 router.get("/delete/:id", async (req, res) => {
     await Todo.deleteOne({ _id: req.params.id });
