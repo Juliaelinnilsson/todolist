@@ -9,7 +9,6 @@ router.get("/createtodo", async (req, res) => {
 
 router.post("/createtodo", async (req, res) => {
 
-    //req.body alla name properties
     const todo = new Todo({
         todo: req.body.todo,
         date: req.body.date
@@ -24,7 +23,6 @@ router.post("/createtodo", async (req, res) => {
 
         }
     });
-
 });
 
 router.get("/todolist", async (req, res) => {
@@ -38,13 +36,10 @@ router.get("/delete/:id", async (req, res) => {
 })
 
 router.get("/update/:id", async (req, res) => {
-    //hämta specifik data från databasen
     const response = await Todo.findById({ _id: req.params.id })
-    //sen skicka till edit sidan
     res.render("edit", { response })
 })
 router.post("/update/:id", async (req, res) => {
-    //använd updateOne metoden för att kunna redigera kommentarerna
     await Todo.updateOne({ _id: req.body._id },
         {
             $set: { todo: req.body.todo, date: req.body.date }

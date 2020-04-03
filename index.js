@@ -2,21 +2,15 @@ const express = require("express");
 const mongoose = require("mongoose");
 const todolistRouter = require("./router/todolistRouter");
 const config = require("./config/config");
-const path = require("path"); //för CSS
+const path = require("path"); 
 const app = express();
 
-//middleware
 app.use(express.urlencoded({ extended: true }))
-
-app.use(express.static(path.join(__dirname, "public"))); // För CSS
-
+app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs")
 
-//router
 app.use(todolistRouter)
 
-
-//listen to port 
 const port = process.env.PORT || 8010;
 const options = {
     useUnifiedTopology: true,
@@ -24,6 +18,5 @@ const options = {
 }
 mongoose.connect(config.databaseURL, options).then(() => {
     console.log("Successful")
-    //app is listening to port 
     app.listen(port);
 })
